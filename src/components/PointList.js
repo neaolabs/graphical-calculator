@@ -37,7 +37,6 @@ function PointList({ points, addPoint, removePoint, updatePoint, setLastFocusedI
               <FaTimes />
             </button>
           </div>
-          {/* If you want to display the point as a mathematical coordinate */}
           <div className="math-output">
             <MathJax inline dynamic>
               {`\\(${point.x}, ${point.y}\\)`}

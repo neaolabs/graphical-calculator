@@ -3,7 +3,6 @@ import React, { useState, useEffect, useRef } from 'react';
 import Sidebar from './components/Sidebar';
 import GraphArea from './components/GraphArea';
 import './App.css';
-import MathJax from 'react-mathjax';
 
 function App() {
   // Theme State
@@ -54,31 +53,29 @@ function App() {
   }, [theme]);
 
   return (
-    <MathJax.Provider>
-      <div className="calculator-container11">
-        <Sidebar 
-          theme={theme} 
-          toggleTheme={toggleTheme} 
-          functions={functions} 
-          setFunctions={setFunctions}
-          points={points}
-          setPoints={setPoints}
-          dottedLines={dottedLines}
-          setDottedLines={setDottedLines}
-          viewport={viewport}
-          setViewport={setViewport}
-          setLastFocusedInput={setLastFocusedInputFunc}
-          insertText={insertText}
-        />
-        <GraphArea 
-          theme={theme} 
-          functions={functions} 
-          points={points} 
-          dottedLines={dottedLines} 
-          viewport={viewport} 
-        />
-      </div>
-    </MathJax.Provider>
+    <div className="calculator-container11">
+      <Sidebar 
+        theme={theme} 
+        toggleTheme={toggleTheme} 
+        functions={functions} 
+        setFunctions={setFunctions}
+        points={points}
+        setPoints={setPoints}
+        dottedLines={dottedLines}
+        setDottedLines={setDottedLines}
+        viewport={viewport}
+        setViewport={setViewport}
+        setLastFocusedInput={setLastFocusedInputFunc}
+        insertText={insertText}
+      />
+      <GraphArea 
+        theme={theme} 
+        functions={functions} 
+        points={points} 
+        dottedLines={dottedLines} 
+        viewport={viewport} 
+      />
+    </div>
   );
 }
 
