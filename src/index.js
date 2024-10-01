@@ -3,15 +3,20 @@ import React from 'react';
 import { createRoot } from 'react-dom/client';
 import App from './App';
 import './index.css';
-import MathJax from 'react-mathjax';
+import { MathJaxContext } from 'better-react-mathjax';
 
 const container = document.getElementById('root');
 const root = createRoot(container);
 
+const config = {
+  loader: { load: ['input/asciimath', 'output/chtml'] }, // Customize as needed
+  // You can add more MathJax configurations here
+};
+
 root.render(
   <React.StrictMode>
-    <MathJax.Provider>
+    <MathJaxContext version={3} config={config}>
       <App />
-    </MathJax.Provider>
+    </MathJaxContext>
   </React.StrictMode>
 );

@@ -1,7 +1,7 @@
 // src/components/FunctionList.js
 import React from 'react';
 import { FaTimes } from 'react-icons/fa';
-import MathJax from 'react-mathjax';
+import { MathJax } from 'better-react-mathjax';
 import './FunctionList.css';
 
 function FunctionList({ functions, addFunction, removeFunction, updateFunction, setLastFocusedInput }) {
@@ -40,7 +40,9 @@ function FunctionList({ functions, addFunction, removeFunction, updateFunction, 
             </button>
           </div>
           <div className="math-output">
-            <MathJax.Node formula={`\\(${func.expression}\\)`} />
+            <MathJax inline dynamic>
+              {`\\(${func.expression}\\)`}
+            </MathJax>
           </div>
         </div>
       ))}
