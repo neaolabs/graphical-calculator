@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import Plot from 'react-plotly.js';
 import './GraphArea.css';
-import { parse, range } from 'mathjs'; // Removed 'evaluate'
+import { parse, range } from 'mathjs';
 
 function GraphArea({ theme, functions, points, dottedLines, viewport }) {
   const [plots, setPlots] = useState([]);
@@ -103,9 +103,9 @@ function GraphArea({ theme, functions, points, dottedLines, viewport }) {
   }, [functions, points, dottedLines, viewport]);
 
   const layout = {
-    margin: { t: 0, b: 40, l: 50, r: 0 }, 
+    margin: { t: 0, b: 40, l: 50, r: 0 },
     legend: { x: 0, y: 1.1, orientation: 'h' },
-    dragmode: 'pan',
+    dragmode: 'pan', // Enable panning by default
     plot_bgcolor: theme === 'dark' ? '#2e2e2e' : '#f9f9f9',
     paper_bgcolor: theme === 'dark' ? '#2e2e2e' : '#f9f9f9',
     font: {
@@ -147,7 +147,7 @@ function GraphArea({ theme, functions, points, dottedLines, viewport }) {
     dragMode: 'pan',
     editable: false,
     displaylogo: false,
-    touchmode: 'auto',
+    touchmode: 'auto', // Ensure touchmode is set to auto
     modeBarButtonsToAdd: ['lasso2d', 'select2d'],
   };
 
@@ -158,6 +158,7 @@ function GraphArea({ theme, functions, points, dottedLines, viewport }) {
         layout={layout}
         config={config}
         style={{ width: '100%', height: '100%' }}
+        useResizeHandler={true}
       />
       <div className="instructions">
         <p>Slyacademy.com</p>
