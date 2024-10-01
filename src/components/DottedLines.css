@@ -1,0 +1,92 @@
+/* DottedLines.css */
+
+.dotted-line-controls {
+    margin-top: 20px;
+}
+
+.dotted-line-item {
+    border: 1px solid #ecebeb;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #fafafa;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+body.dark-mode .dotted-line-item {
+    background-color: #4e4e4e;
+    border-color: #555;
+}
+
+.line-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.dotted-line-controls label {
+    margin-right: 5px;
+}
+
+.dotted-line-controls select,
+.dotted-line-controls input[type="number"],
+.dotted-line-controls input[type="color"] {
+    padding: 5px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    border: 1px solid #ecebeb;
+    transition: border-color 0.3s, background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode .dotted-line-controls select,
+body.dark-mode .dotted-line-controls input[type="number"],
+body.dark-mode .dotted-line-controls input[type="color"] {
+    background-color: #6e6e6e;
+    color: #f4f4f9;
+    border-color: #555;
+}
+
+.remove-line-btn {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.remove-line-btn:hover {
+    background-color: #e60000;
+}
+
+.add-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 15px;
+    border-radius: 25px;
+    background: linear-gradient(135deg, #4b9cea, #28c4e0);
+    color: white;
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+    text-decoration: none;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.add-btn:hover {
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+}
+
+.add-btn:active {
+    transform: translateY(0);
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+}

@@ -1,0 +1,23 @@
+/* Sidebar.css */
+
+/* Sidebar Styles */
+.sidebar {
+    width: 350px;
+    background-color: #fff;
+    border-right: 1px solid #ccc;
+    padding: 20px;
+    overflow-y: auto;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode .sidebar {
+    background-color: #3e3e3e;
+    color: #f4f4f9;
+    border-right: 1px solid #555;
+}
+
+.sidebar h1 {
+    font-size: 24px;
+    color: #1f3c71;
+    margin-bottom: 20px;
+}

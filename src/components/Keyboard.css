@@ -1,0 +1,48 @@
+/* Keyboard.css */
+
+.keyboard {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+    height: 200px;
+    overflow-y: scroll;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+body.dark-mode .keyboard {
+    background-color: #3e3e3e;
+    box-shadow: 0px 2px 8px rgba(255, 255, 255, 0.1);
+}
+
+.keyboard h4 {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.keyboard-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-bottom: 5px;
+}
+
+.keyboard-btn {
+    flex: 1 1 calc(16.66% - 10px); /* 6 buttons per row */
+    background-color: #0daddd;
+    color: white;
+    padding: 8px;
+    margin: 2px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    text-align: center;
+    min-width: 50px;
+    transition: background-color 0.3s;
+}
+
+.keyboard-btn:hover {
+    background-color: #1e8ab1;
+}

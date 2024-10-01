@@ -1,0 +1,21 @@
+/* ThemeToggle.css */
+
+.theme-toggle {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.theme-toggle select {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ecebeb;
+    transition: border-color 0.3s;
+}
+
+body.dark-mode .theme-toggle select {
+    background-color: #6e6e6e;
+    color: #f4f4f9;
+    border-color: #555;
+}

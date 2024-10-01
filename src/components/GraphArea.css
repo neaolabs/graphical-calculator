@@ -1,0 +1,54 @@
+/* GraphArea.css */
+
+/* Container for the Graph Area */
+.graph-area {
+    flex: 1; /* Allows the graph area to expand and fill available space */
+    position: relative; /* Enables absolute positioning for child elements */
+    padding: 0; /* Removes default padding */
+    background-color: #f9f9f9; /* Light background color for the graph area */
+    transition: background-color 0.3s; /* Smooth transition for theme changes */
+    touch-action: pan-x pan-y pinch-zoom; /* Enables touch interactions */
+}
+
+/* Dark Mode Styling for Graph Area */
+body.dark-mode .graph-area {
+    background-color: #2e2e2e; /* Dark background color */
+}
+
+/* Styling for the Plotly Graph */
+.graph-area > div {
+    width: 100%;
+    height: 100%;
+}
+
+/* Instructions Overlay */
+.instructions {
+    position: absolute; /* Positions the instructions relative to the graph area */
+    bottom: 10px; /* 10px from the bottom */
+    left: 10px; /* 10px from the left */
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    padding: 5px 10px; /* Padding around the text */
+    font-size: 12px; /* Smaller font size */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transitions for theme changes */
+    pointer-events: none; /* Allows clicks to pass through to the graph */
+}
+
+/* Dark Mode Styling for Instructions */
+body.dark-mode .instructions {
+    background-color: rgba(50, 50, 50, 0.8); /* Semi-transparent dark background */
+    color: #f4f4f9; /* Light text color */
+}
+
+/* Responsive Design for Smaller Screens */
+@media screen and (max-width: 1024px) {
+    .graph-area {
+        height: 60vh; /* Sets graph area height to 60% of viewport height */
+    }
+
+    .instructions {
+        font-size: 10px; /* Smaller font size on smaller screens */
+        bottom: 5px; /* Adjusts position */
+        left: 5px;
+    }
+}

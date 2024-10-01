@@ -1,0 +1,89 @@
+/* FunctionList.css */
+
+.function-list {
+    margin-top: 20px;
+}
+
+.function-item {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ecebeb;
+    border-radius: 10px;
+    background-color: #fafafa;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+body.dark-mode .function-item {
+    background-color: #4e4e4e;
+    border-color: #555;
+}
+
+.function-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.function-type-select, .function-input, .color-picker {
+    padding: 6px;
+    font-size: 14px;
+    border: 1px solid #ecebeb;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+}
+
+body.dark-mode .function-type-select,
+body.dark-mode .function-input,
+body.dark-mode .color-picker {
+    background-color: #6e6e6e;
+    color: #f4f4f9;
+    border-color: #555;
+}
+
+.remove-btn {
+    background-color: transparent;
+    border: none;
+    color: #c1baba;
+    font-size: 20px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.remove-btn:hover {
+    color: #ff0000;
+}
+
+.math-output {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.add-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 15px;
+    border-radius: 25px;
+    background: linear-gradient(135deg, #4b9cea, #28c4e0);
+    color: white;
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+    text-decoration: none;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.add-btn:hover {
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+}
+
+.add-btn:active {
+    transform: translateY(0);
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+}
