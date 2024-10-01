@@ -9,7 +9,7 @@ const container = document.getElementById('root');
 const root = createRoot(container);
 
 const config = {
-  loader: { load: ['input/asciimath', 'output/chtml'] }, // Customize as needed
+  loader: { load: ['input/tex', 'output/chtml'] }, // Customize as needed
   // You can add more MathJax configurations here
 };
 

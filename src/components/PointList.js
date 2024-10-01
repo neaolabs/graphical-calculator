@@ -1,6 +1,7 @@
 // src/components/PointList.js
 import React from 'react';
 import { FaTimes } from 'react-icons/fa';
+import { MathJax } from 'better-react-mathjax';
 import './PointList.css';
 
 function PointList({ points, addPoint, removePoint, updatePoint, setLastFocusedInput }) {
@@ -35,6 +36,12 @@ function PointList({ points, addPoint, removePoint, updatePoint, setLastFocusedI
             <button className="remove-btn" onClick={() => removePoint(index)}>
               <FaTimes />
             </button>
+          </div>
+          {/* If you want to display the point as a mathematical coordinate */}
+          <div className="math-output">
+            <MathJax inline dynamic>
+              {`\\(${point.x}, ${point.y}\\)`}
+            </MathJax>
           </div>
         </div>
       ))}
